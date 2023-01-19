@@ -225,4 +225,4 @@ dependencies:
     - urllib3==1.26.11
     - werkzeug==2.2.2
     - wrapt==1.14.1
-prefix: /noether/s0/aqd5773/anaconda3/envs/candidate_generation
+prefix: /noether/s0/aqd5773/anaconda3/envs/forward_v_inverse
