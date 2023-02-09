@@ -3,6 +3,7 @@ import pymatgen.core as mg
 import torch
 import os
 
+
 def pymatgen_comp(comp_list):
     iterable = True
     try:
@@ -62,3 +63,21 @@ def check_cuda():
   return cuda
 
 
+def get_comp(vec, elem_list, thresh=0.02):
+    vec[vec<thresh] = 0
+    vec /= vec.sum()
+    comp = ''
+    for i, x in enumerate(vec):
+        if x > 0:
+            comp += elem_list[i] + '{:.2f} '.format(x)
+    return mg.Composition(comp)
+
+
+
+def get_number_of_components(comp_list):
+  count_list = []
+  for c in comp_list:
+    if not type(c) == mg.Composition:
+      c = mg.Composition(c)
+      count_list.append(len(list(c.get_el_amt_dict().keys())))
+  return count_list
