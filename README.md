@@ -15,7 +15,9 @@ You can download a copy of all the files in this repository by cloning the git r
 git clone https://github.com/dovahkiin0022/forward_v_inverse.git
 ```
 
-A copy of the repository is also archived at 
+A copy of the repository is also archived at [![DOI](https://zenodo.org/badge/561584458.svg)](https://zenodo.org/badge/latestdoi/561584458)
+
+
 
 # Installation
 
